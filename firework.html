@@ -63,6 +63,7 @@
             <p id="line2"></p>
             <p id="line3"></p>
             <p id="line4"></p>
+			<p id="line5"></p>
         </div>
     </div>
 
@@ -148,15 +149,18 @@
             }, 0);
         };
 
-        function showText() {
+        function showText() { 
+    setTimeout(function () {
+        typeText('line1', 'Chúc mừng năm mới toàn thể anh, chị, em Anyone !', 70, function () {
             setTimeout(function () {
-                typeText('line1', 'Chúc mừng năm mới toàn thể anh, chị, em Anyone !', 70, function () {
+                typeText('line2', 'Nhân dịp năm mới, chúc mọi người và gia đình luôn vui vẻ, mạnh khoẻ và hạnh phúc.', 70, function () {
                     setTimeout(function () {
-                        typeText('line2', 'Nhân dịp năm mới, chúc mọi người và gia đình luôn vui vẻ, mạnh khoẻ và hạnh phúc.', 70, function () {
+                        typeText('line3', 'Chúc đại gia đình Anyone một năm mới tràn ngập tiếng cười, có những bữa cơm ấm áp và chúc mọi điều tốt đẹp nhất đến với mọi người!', 70, function () {
                             setTimeout(function () {
-                                typeText('line3', 'Chúc đại gia đình Anyone một năm mới tràn ngập tiếng cười, có những bữa cơm ấm áp và chúc mọi điều tốt đẹp nhất đến với mọi người!', 70, function () {
+                                typeText('line4', 'Happy New Year!!! -Gnouc 3301-', 70, function () {
                                     setTimeout(function () {
-                                        typeText('line4', 'Happy New Year!!! -Gnouc 3301-', 70, function () {
+                                        typeText('line5', 'From LQC with love ! ❤️', 70, function () {
+                                            // Optional: Do something after the last text finishes typing
                                         });
                                     }, 500);
                                 });
@@ -164,8 +168,12 @@
                         });
                     }, 500);
                 });
-            }, 1000);
-        }
+            }, 500);
+        });
+    }, 1000);
+}
+
+
 
         function typeText(elementId, text, speed, callback) {
             let element = document.getElementById(elementId);
